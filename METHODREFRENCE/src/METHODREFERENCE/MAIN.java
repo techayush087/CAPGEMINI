@@ -16,5 +16,9 @@ public class MAIN{
         Printable p = d::getName;
 
         System.out.println("Student Name: " + p.print());
+
+         FactorialInterface fct= new Factorial()::fact;
+        
+         System.out.println(fct.find(6));
     }
 }
