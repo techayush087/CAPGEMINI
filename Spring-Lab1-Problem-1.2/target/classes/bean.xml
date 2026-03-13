@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> 
+
+
+<bean name="employee" class="com.cg.bean.Employee" scope="prototype">
+    <property name="empid" value="12345"></property>
+    <property name="name" value="Harriet"></property>
+    <property name="salary" value="40000.0"></property>
+    <property name="businessUnit" ref="sbu"></property>
+    
+
+
+</bean>
+
+
+<bean name="sbu" class="com.cg.bean.SBU" scope="prototype">
+    <property name="sbuId" value="PES-BU"></property>
+    <property name="sbuHead" value="Kiran Rao"></property>
+    <property name="sbuName" value="Product ENgineering Services"></property>
+
+</bean>
+
+
+
+
+
+
+
+
+</beans>
