@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!--
+	bean definitions here -->
+	<!--<bean id="Hello" class="com.cg.bean.HelloWorld" scope="prototype">
+		<property name="name" value="Ayush"></property>
+
+		<property name="language">
+			<list>
+				<value>Hindi</value>
+				<value>English</value>
+				<value>Spanish</value>
+			</list>
+		</property>
+	</bean>
+	-->
+	
+	<context:annotation-config></context:annotation-config>
+	
+	<!--<bean id="e" class="com.cg.bean.Employee" scope="prototype">
+	     <property name="empid" value="1001"></property>
+	     <property name="name" value="Ayush"></property>
+	     
+	</bean>
+	
+	
+	<bean id="add" class="com.cg.bean.Address">
+	    <property name="city" value="Delhi"></property>
+	    <property name="Country" value="India"></property>
+	    <property name="zip" value="202133"></property>
+	</bean>
+	
+	<bean id="address" class="com.cg.bean.Address">
+	    <property name="city" value="Mumbai"></property>
+	    <property name="Country" value="India"></property>
+	    <property name="zip" value="201013"></property>
+	</bean>-->
+	
+	
+	<context:component-scan base-package="com.cg.bean"></context:component-scan>
+	
+	<context:property-placeholder location="classpath:data.properties"></context:property-placeholder>
+</beans>
