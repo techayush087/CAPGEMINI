@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config></context:annotation-config>
+	<bean name="emp1" class="com.cg.bean.Employee" scope="prototype">
+		<property name="empid" value="101"></property>
+		<property name="name" value="Harriet"></property>
+		<property name="salary" value="40000.0"></property>
+	
+
+
+	</bean>
+
+	<bean name="emp2" class="com.cg.bean.Employee" scope="prototype">
+		<property name="empid" value="102"></property>
+		<property name="name" value="Juliet"></property>
+		<property name="salary" value="50000.0"></property>
+
+	</bean>
+	
+	<bean name="es" class="com.cg.bean.EmployeeService" scope="prototype">
+	     <property name="mapEmp">
+	        <map>
+	           <entry key="101" value-ref="emp1"></entry>
+	           <entry key="102" value-ref="emp2"></entry>
+	        
+	        </map>
+	     </property>
+	
+	</bean>
+	
+	
+
+
+
+
+
+</beans>
